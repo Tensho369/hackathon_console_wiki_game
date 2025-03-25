@@ -1,0 +1,73 @@
+*** Guessing game ***
+
+## Game goal and description
+Find two pages that have coordinates. The user must guess which one is further north.
+
+## Walkthrough - step-by-step of game progress
+1. The game begins by explaining to the player the rules of the game, how you collect points.
+2. The game presents to the user two different Wikipedia article titles, probably landmarks or cities.
+   (Depends on how we can get the information from wikipedia based on categories.)
+3. The game asks the user, which of these two things is further north.
+4. The user gives an answer 1 or 2
+5. The game tells if the answer is correct or not
+
+6. Repeat the above X times
+
+7. Give final score to the player Y right answers out of X
+
+## Tasks (functions) Monday
+David: get page with coordinates (Done)
+
+Jukka: given two coordinates, which one is further north. Check the input parameters. (Done)
+       Return None, if the given input was not valid.
+       Return 0 if the first input was more north, 1 if the second
+
+David: present article names to the user with the question, which is further north? (Done)
+
+Suyanthan: introducing the game (Done)
+Karuvan: getting user input in a robust way, accepting only number 1 or 2
+Suyanthan: given coordinates, calculate the distance between the places (bonus) (Done)
+
+## Tasks Tuesday
+
+Jukka: investigate how we could get others to run the code from the shared folder
+Jukka: define a function... When you give it page title or id, it returns a short description of the place.
+
+Karuvan/Suyanthan: finding my possition lat, lon
+Nikita: how to find what lat, lon(pos) is gloser to a lat, log(pos)
+
+## Tasks Wednesday
+
+### To discuss
+
+1. I was reading the documentation to understand the geolocator. If I understand correctly,
+this line could have "user_agent=Guessipedia". The docu is asking who is calling the
+geolocator service.
+I am impressed you found geopy to do this!
+geolocator = Nominatim(user_agent=address)
+I added a unit test for the function. It works great when it finds a place on earth that is even close to
+what input the user gave. (DONE)
+
+2. David: If I give "lkeang lksbölkwn lke lk<smg"  as my location, I get an error message that my location is not found
+but I don't get a chance to give another location 
+It results in an error later because in this case the function returns "None". (DONE)
+
+3. David: The question "which is further distance" wasn't clear to me first.
+   Can we modify the code to ask "Which is further distance from you?" (DONE)
+
+4. David: Shall we add names of players (done)
+
+5. David: Wrong answers in red color and add color elsewhere as well. (DONE)
+
+6. Jukka: Would be nice if the user got a message "Your coordinates are x deg North, y deg East" ()
+          And also show where you are on the map.
+
+7. David: Would be nice if after giving the answer, the message would include what the distance was between the player
+and the locations. (DONE)
+
+8. David: Would be nice, if after giving the answer, the user would learn the positions of the two locations and how
+many degrees and kilometers further north, east or west the positions were (DONE)
+
+9. Jukka: Start with the presentation (Done)
+
+10. The main function is getting long. Maybe we can break it a bit into separate functions?
