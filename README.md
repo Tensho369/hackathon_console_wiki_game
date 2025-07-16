@@ -1,3 +1,5 @@
+> Eigene Version – gepflegt und erweitert von Tensho369.
+ 
 # Overview
 console_wiki_game is a command-line game created at a hackathon that challenges players to navigate through Wikipedia articles, possibly aiming to reach a specific target article starting from a random one. The game likely utilizes Wikipedia's API to fetch article data and presents it in a text-based interface.​
 
